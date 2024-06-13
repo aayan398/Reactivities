@@ -15,12 +15,12 @@ namespace API.Middleware
         public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger, IHostEnvironment env )
         {
 
-            _env = env;
-            _logger = logger;
             _next = next;
+            _logger = logger;
+            _env = env;
         }
 
-        public async Task InvokeAsync(HttpContext context)
+        public async Task  InvokeAsync(HttpContext context)
         {
            try
            {
